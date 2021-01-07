@@ -32,9 +32,10 @@ class Client(discord.Client):
 				if "Bump done" in message.embeds[0].description:
 					now = datetime.datetime.utcnow()
 					two = datetime.timedelta(hours = 2)
+					min = datetime.timedelta(minutes = 1)
 
 					difference = now - message.created_at
-					difference = two - difference
+					difference = two - difference + min
 					print(f"Time until next bump {difference}")
 
 					return difference.seconds
