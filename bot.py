@@ -1,7 +1,6 @@
-import discord
+import discord, datetime
 from asyncio import sleep
 from config import *
-
 
 class Client(discord.Client):
 	active = True
@@ -26,7 +25,24 @@ class Client(discord.Client):
 		print(f"Sent '{content}' to '{ctx.author}'")
 		await self.clean(ctx, message)
 
+	async def bumpCheck(self):
+		channel = self.get_channel(channel_id)
+		async for message in channel.history(limit=50):
+			if str(message.author) == "DISBOARD#2760":
+				if "Bump done" in message.embeds[0].description:
+					now = datetime.datetime.utcnow()
+					two = datetime.timedelta(hours = 2)
+
+					difference = now - message.created_at
+					difference = two - difference
+					print(f"Time until next bump {difference}")
+
+					return difference.seconds
+					break
+
 	async def bump(self):
+		diff = await self.bumpCheck()
+		await sleep(diff)
 		channel = self.get_channel(channel_id)
 		command = await channel.send("!d bump")
 		print("Server bumped")
