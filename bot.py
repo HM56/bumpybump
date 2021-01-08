@@ -42,8 +42,8 @@ class Client(discord.Client):
 					break
 
 	async def bump(self):
-		diff = await self.bumpCheck()
-		await sleep(diff)
+		self.diff = await self.bumpCheck()
+		await sleep(self.diff)
 		channel = self.get_channel(channel_id)
 		command = await channel.send("!d bump")
 		print("Server bumped")
@@ -63,6 +63,6 @@ class Client(discord.Client):
 
 			elif message.content == "!continue":
 				await self.continueBump()
-				await self.send(message, f"Bump is activated, next bump in {delay} seconds :hourglass_flowing_sand:")
+				await self.send(message, f"Bump is activated, next bump in {self.diff} seconds :hourglass_flowing_sand:")
 
 Client().run(user_token, bot=False)
