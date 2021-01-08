@@ -54,7 +54,6 @@ class Client(discord.Client):
 		while(self.active == True):
 			command = await self.bump()
 			await self.clean(command)
-			await sleep(delay)
 
 	async def on_message(self, message):
 		if message.author == self.user:
