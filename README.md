@@ -75,3 +75,7 @@ pip install asyncio
 
 ### The bot is out of sync
 If this happen, you may see in the `!continue` that the time doesn't change. Or the log says "Next bump in -1 day". In this case, try to manually bump and try again.
+
+### Other issue / idea
+Please open an issue if you have any problem. Have fun!
+
