@@ -1,7 +1,5 @@
 # Auto-bumper for Disboard
 
-![bump](https://disboard.org/images/bot-command-image-bump.png)
-
 <p align="center"><img src="https://disboard.org/images/bot-command-image-bump.png"></p>
 
 ## Set it up
