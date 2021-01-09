@@ -2,6 +2,11 @@
 
 <p align="center"><img src="https://disboard.org/images/bot-command-image-bump.png"></p>
 
+A user-bot (or self-bot) that can automatically bump servers :smile:. Undetactable by the Disboard bot.
+
+> **Make sure to ONLY use commands in private messages and never talk about the bot in the server, you can get banned
+from disboard and/or from Discord itself! Proceed at your own risks.**
+
 ## Set it up
 1. Install Python3 and Pip3, example:
 
