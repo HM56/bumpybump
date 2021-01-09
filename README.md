@@ -2,6 +2,8 @@
 
 ![bump](https://disboard.org/images/bot-command-image-bump.png)
 
+<p align="center"><img src="https://disboard.org/images/bot-command-image-bump.png"></p>
+
 ## Set it up
 1. Install Python3 and Pip3, example:
 
